@@ -5,6 +5,7 @@
 <form action="<?=url('/imoveis/store'); ?>" method="post">
 
     <?= csrf_field(); ?>
+
     <label for="title">Título do Imóvel.:</label>
     <input type="text" name="title" id="title">
     <br />

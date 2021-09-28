@@ -20,4 +20,12 @@ Route::get('/imoveis','PropertyController@index');
 Route::get('/imoveis/novo','PropertyController@create');
 Route::post('/imoveis/store','PropertyController@store');
 
-Route::get('/imoveis/cliente', 'PropertyController@client');
+Route::get('/imoveis/{slug}', 'PropertyController@Show');
+
+Route::get('/imoveis/editar/{slug}','PropertyController@edit');
+Route::put('/imoveis/update/{slug}','PropertyController@update');
+
+Route::get('/imoveis/remover/{slug}','PropertyController@destroy');
+
+
+
