@@ -21,7 +21,7 @@ class PropertyController extends Controller
         $property = Property::where('slug', $slug)->get();
 
         if (!empty($property)){
-            return view('property/show')->with('property',$property);
+            return view('property.show')->with('property',$property);
         }else{
             return redirect()->action('PropertyController@index');
         }
@@ -64,7 +64,7 @@ class PropertyController extends Controller
         //$property = DB::select("SELECT * FROM properties WHERE slug = ?", [$slug]);
         $property = Property::where('slug', $slug)->get();
         if (!empty($property)){
-            return view('property/edit')->with('property',$property);
+            return view('property.edit')->with('property',$property);
         }else{
             return redirect()->action('PropertyController@index');
         }
